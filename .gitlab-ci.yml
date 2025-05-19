@@ -1,0 +1,19 @@
+stages :
+ - install 
+ - test
+ - deploy
+
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+  
+run_tests:
+  stage:  test
+  script:
+    - npm test 
+  
+deploy_app:
+  stage: deploy
+  script: 
+    - echo "deploying the app ....."
